@@ -1,0 +1,54 @@
+<form action="">
+  <fieldset>
+    <legend>Currency Pipe</legend>
+    <div class="card card-block">
+      <h4 class="card-title">Currency</h4>
+      <div class="card-text">
+        <h2>Currency Pipes!</h2>
+        <p>Our Amount: {{ amt }}</p>
+        <p>Currency Pipe: {{ amt | currency }}</p>
+        <p>India Currency: {{ amt | currency: 'INR' }}</p>
+      </div>
+    </div>
+  </fieldset>
+</form>
+<form action="">
+  <fieldset>
+    <legend>Decimal Pipe</legend>
+    <h2>Number Pipe</h2>
+    <p>This is our Decimal number value: {{ decimal }}</p>
+    <p>Decimal Pipe: {{ decimal | number }}</p>
+    <p>Decimal Pipe 4 decimal places: {{ decimal | number: '1.4' }}</p>
+    <p>Decimal Pipe 6 decimal places: {{ decimal | number: '1.6' }}</p>
+  </fieldset>
+</form>
+<form action="">
+  <fieldset>
+    <legend>Decimal Pipe</legend>
+    <div class="card card-block">
+      <h4 class="card-title">Lowercase,Uppercase,Titlecase</h4>
+      <div class="card-text">
+        <p>String is : {{ text }}</p>
+        <br />
+        <p>Uppercase Pipe -> {{ text | uppercase }}</p>
+        <p>Lowercase Pipe -> {{ text | lowercase }}</p>
+        <p>Titlecase Pipe -> {{ text | titlecase }}</p>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+<form action="">
+  <fieldset>
+    <legend>Date Pipe</legend>
+    <p>Date of Birth : {{ birth | date: format }}</p>
+    <button (click)="birthDay()">Click</button>
+  </fieldset>
+</form>
+<form action="">
+  <fieldset>
+    <legend>Percentage Pipe</legend>
+    <p>Percentage value is: {{ percentage }}</p>
+    <p>Percentage Pipe: {{ percentage | percent }}</p>
+  </fieldset>
+</form>
